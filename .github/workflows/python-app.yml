@@ -1,3 +1,29 @@
+name: Run Unit Tests
 
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
-name: Run Python tests
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.12'
+
+    - name: Install dependencies
+      run: |
+        pip install pygame
+        pip install -r requirements.txt || echo "No requirements.txt"
+
+    - name: Run unit tests
+      run: |
+        python -m unittest discover -s tests
