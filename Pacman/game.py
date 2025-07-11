@@ -27,11 +27,13 @@ class Game:
                 self.player.move("up")
             if keys[pygame.K_DOWN]:
                 self.player.move("down")
-
+            #call Ai based on player position
+            self.enemy.update(self.player)
             self.screen.fill((0, 0, 0))
             self.player.draw(self.screen)
             self.enemy.draw(self.screen)
             pygame.display.flip()
+            
             self.clock.tick(30)
 
         pygame.quit()

@@ -21,7 +21,6 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install pygame
         pip install -r Pacman/requirements.txt || echo "No requirements.txt"
 
     - name: Run unit tests
