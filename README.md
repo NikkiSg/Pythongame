@@ -15,20 +15,7 @@ This project is a simplified version of the classic **Pacman game**, built using
 
 ---
 
-## 📁 Project Structure
 
-Pacman/
-├── game.py # Main game loop
-├── player.py # Player logic
-├── enemy.py # Enemy AI logic
-├── tests/ # Unit tests
-│ ├── init.py
-│ └── test_player.py
-└── .github/
-└── workflows/
-└── python-app.yml # GitHub Actions CI
-
----
 
 ## 🧠 AI Technique Used
 
